@@ -1,292 +1,376 @@
-FLASK_APP = onlyfans_collector.py
-FLASK_ENV = development
-FLASK_DEBUG = 0
-In folder C:/PYTHON
-C:\Users\artem\AppData\Local\Programs\Python\Python311\python.exe -m flask run 
- * Serving Flask app 'onlyfans_collector.py'
+Microsoft Windows [Version 10.0.19045.5796]
+(c) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+
+C:\PYTHON>python onlyfans_collector_app.py
+python: can't open file 'C:\\PYTHON\\onlyfans_collector_app.py': [Errno 2] No such file or directory
+
+C:\PYTHON>python onlyfans_collector_app.py
+python: can't open file 'C:\\PYTHON\\onlyfans_collector_app.py': [Errno 2] No such file or directory
+
+C:\PYTHON>python onlyfans_collector_app.py
+python: can't open file 'C:\\PYTHON\\onlyfans_collector_app.py': [Errno 2] No such file or directory
+
+C:\PYTHON>
+C:\PYTHON>
+C:\PYTHON>rm onlyfans_data.db
+"rm" не является внутренней или внешней
+командой, исполняемой программой или пакетным файлом.
+
+C:\PYTHON>remove
+"remove" не является внутренней или внешней
+командой, исполняемой программой или пакетным файлом.
+
+C:\PYTHON>pip
+
+Usage:
+  pip <command> [options]
+
+Commands:
+  install                     Install packages.
+  lock                        Generate a lock file.
+  download                    Download packages.
+  uninstall                   Uninstall packages.
+  freeze                      Output installed packages in requirements format.
+  inspect                     Inspect the python environment.
+  list                        List installed packages.
+  show                        Show information about installed packages.
+  check                       Verify installed packages have compatible dependencies.
+  config                      Manage local and global configuration.
+  search                      Search PyPI for packages.
+  cache                       Inspect and manage pip's wheel cache.
+  index                       Inspect information available from package indexes.
+  wheel                       Build wheels from your requirements.
+  hash                        Compute hashes of package archives.
+  completion                  A helper command used for command completion.
+  debug                       Show information useful for debugging.
+  help                        Show help for commands.
+
+General Options:
+  -h, --help                  Show help.
+  --debug                     Let unhandled exceptions propagate outside the main subroutine, instead of logging them to stderr.
+  --isolated                  Run pip in an isolated mode, ignoring environment variables and user configuration.
+  --require-virtualenv        Allow pip to only run in a virtual environment; exit with an error otherwise.
+  --python <python>           Run pip with the specified Python interpreter.
+  -v, --verbose               Give more output. Option is additive, and can be used up to 3 times.
+  -V, --version               Show version and exit.
+  -q, --quiet                 Give less output. Option is additive, and can be used up to 3 times (corresponding to WARNING, ERROR, and CRITICAL logging      
+                              levels).
+  --log <path>                Path to a verbose appending log.
+  --no-input                  Disable prompting for input.
+  --keyring-provider <keyring_provider>
+                              Enable the credential lookup via the keyring library if user input is allowed. Specify which mechanism to use [auto, disabled,  
+                              import, subprocess]. (default: auto)
+  --proxy <proxy>             Specify a proxy in the form scheme://[user:passwd@]proxy.server:port.
+  --retries <retries>         Maximum attempts to establish a new HTTP connection. (default: 5)
+  --timeout <sec>             Set the socket timeout (default 15 seconds).
+  --exists-action <action>    Default action when a path already exists: (s)witch, (i)gnore, (w)ipe, (b)ackup, (a)bort.
+  --trusted-host <hostname>   Mark this host or host:port pair as trusted, even though it does not have valid or any HTTPS.
+  --cert <path>               Path to PEM-encoded CA certificate bundle. If provided, overrides the default. See 'SSL Certificate Verification' in pip        
+                              documentation for more information.
+  --client-cert <path>        Path to SSL client certificate, a single file containing the private key and the certificate in PEM format.
+  --cache-dir <dir>           Store the cache data in <dir>.
+  --no-cache-dir              Disable the cache.
+  --disable-pip-version-check
+                              Don't periodically check PyPI to determine whether a new version of pip is available for download. Implied with --no-index.     
+  --no-color                  Suppress colored output.
+  --use-feature <feature>     Enable new functionality, that may be backward incompatible.
+  --use-deprecated <feature>  Enable deprecated functionality, that will be removed in the future.
+  --resume-retries <resume_retries>
+                              Maximum attempts to resume or restart an incomplete download. (default: 0)
+
+C:\PYTHON>pip --version
+pip 25.1.1 from C:\Users\artem\AppData\Local\Programs\Python\Python311\Lib\site-packages\pip (python 3.11)
+
+C:\PYTHON>python --version
+Python 3.11.0
+
+C:\PYTHON>python onlyfans_collector.py
+2025-05-12 10:35:09,096 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-05-12 10:35:09,097 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-05-12 10:35:09,097 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-05-12 10:35:09,143 - INFO - Added job "run_collector" to job store "default"
+2025-05-12 10:35:09,143 - INFO - Added job "run_collector" to job store "default"
+2025-05-12 10:35:09,143 - INFO - Added job "run_collector" to job store "default"
+2025-05-12 10:35:09,144 - INFO - Scheduler started
+ * Serving Flask app 'onlyfans_collector'
  * Debug mode: off
-2025-05-12 10:08:00,602 - INFO - WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+2025-05-12 10:35:09,699 - INFO - WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
  * Running on http://127.0.0.1:5000
-2025-05-12 10:08:00,602 - INFO - Press CTRL+C to quit
-2025-05-12 10:09:15,607 - INFO - 127.0.0.1 - - [12/May/2025 10:09:15] "GET / HTTP/1.1" 200 -
-2025-05-12 10:09:19,852 - INFO - 127.0.0.1 - - [12/May/2025 10:09:19] "POST /clear_db HTTP/1.1" 302 -
-2025-05-12 10:09:19,863 - INFO - 127.0.0.1 - - [12/May/2025 10:09:19] "GET / HTTP/1.1" 200 -
-2025-05-12 10:09:30,995 - INFO - 127.0.0.1 - - [12/May/2025 10:09:30] "POST /set_config HTTP/1.1" 302 -
-2025-05-12 10:09:31,003 - INFO - 127.0.0.1 - - [12/May/2025 10:09:31] "GET / HTTP/1.1" 200 -
-2025-05-12 10:09:32,019 - INFO - Запуск AdsPower профиля...
-2025-05-12 10:09:32,720 - INFO - Сбор подписчиков...
-2025-05-12 10:09:33,706 - INFO - Прокрутка страницы...
-2025-05-12 10:14:29,304 - INFO - Прокрутка завершена.
-2025-05-12 10:14:29,633 - WARNING - Ошибка обработки подписчика: table subscribers has no column named date
-2025-05-12 10:14:29,658 - WARNING - Ошибка обработки подписчика: Message: no such element: Unable to locate element: {"method":"css selector","selector":"a.g-user-username"}
+2025-05-12 10:35:09,725 - INFO - Press CTRL+C to quit
+2025-05-12 10:35:09,761 - INFO - 127.0.0.1 - - [12/May/2025 10:35:09] "GET / HTTP/1.1" 200 -
+2025-05-12 10:35:11,583 - INFO - 127.0.0.1 - - [12/May/2025 10:35:11] "GET /favicon.ico HTTP/1.1" 404 -
+2025-05-12 10:35:32,134 - ERROR - Не указан profile_id
+2025-05-12 10:35:32,135 - INFO - 127.0.0.1 - - [12/May/2025 10:35:32] "POST /run HTTP/1.1" 302 -
+2025-05-12 10:35:32,148 - INFO - 127.0.0.1 - - [12/May/2025 10:35:32] "GET / HTTP/1.1" 200 -
+2025-05-12 10:35:39,964 - INFO - 127.0.0.1 - - [12/May/2025 10:35:39] "POST /set_config HTTP/1.1" 302 -
+2025-05-12 10:35:39,974 - INFO - 127.0.0.1 - - [12/May/2025 10:35:39] "GET / HTTP/1.1" 200 -
+2025-05-12 10:35:41,075 - INFO - Запуск AdsPower профиля...
+2025-05-12 10:35:41,632 - INFO - Сбор подписчиков...
+2025-05-12 10:35:44,705 - INFO - Прокрутка страницы...
+2025-05-12 10:40:41,829 - INFO - Прокрутка завершена.
+2025-05-12 10:40:42,176 - WARNING - Ошибка обработки подписчика: Message: no such element: Unable to locate element: {"method":"css selector","selector":"a.g-user-username"}
   (Session info: chrome=134.0.6998.36); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Stacktrace:
-	GetHandleVerifier [0x00007FF632772975+53717]
-	simdutf::get_active_implementation [0x00007FF632597CF7+1747783]
-	(No symbol) [0x00007FF632235DA9]
-	(No symbol) [0x00007FF632285207]
-	(No symbol) [0x00007FF63228579C]
-	(No symbol) [0x00007FF63227A07C]
-	(No symbol) [0x00007FF6322AD33F]
-	(No symbol) [0x00007FF632279FCC]
-	(No symbol) [0x00007FF632279EC7]
-	(No symbol) [0x00007FF6322AD510]
-	(No symbol) [0x00007FF632279FCC]
-	(No symbol) [0x00007FF6322CFDE7]
-	(No symbol) [0x00007FF6322AD0D3]
-	(No symbol) [0x00007FF6322791CE]
-	(No symbol) [0x00007FF632278209]
-	(No symbol) [0x00007FF632278F6C]
-	GetHandleVerifier [0x00007FF632791BDD+181309]
-	sqlite3_dbdata_init [0x00007FF632A355B2+2262482]
-	sqlite3_dbdata_init [0x00007FF632A34F54+2260852]
-	sqlite3_dbdata_init [0x00007FF632A30C2B+2243659]
-	sqlite3_dbdata_init [0x00007FF632A35E57+2264695]
-	simdutf::get_active_implementation [0x00007FF6325B24CB+1856283]
-	simdutf::get_active_implementation [0x00007FF6325A47B4+1799684]
-	simdutf::get_active_implementation [0x00007FF6325A494B+1800091]
-	simdutf::get_active_implementation [0x00007FF63258484C+1668764]
-	BaseThreadInitThunk [0x00007FFB33977374+20]
-	RtlUserThreadStart [0x00007FFB33F5CC91+33]
+        GetHandleVerifier [0x00007FF632772975+53717]
+        simdutf::get_active_implementation [0x00007FF632597CF7+1747783]
+        (No symbol) [0x00007FF632235DA9]
+        (No symbol) [0x00007FF632285207]
+        (No symbol) [0x00007FF63228579C]
+        (No symbol) [0x00007FF63227A07C]
+        (No symbol) [0x00007FF6322AD33F]
+        (No symbol) [0x00007FF632279FCC]
+        (No symbol) [0x00007FF632279EC7]
+        (No symbol) [0x00007FF6322AD510]
+        (No symbol) [0x00007FF632279FCC]
+        (No symbol) [0x00007FF6322CFDE7]
+        (No symbol) [0x00007FF6322AD0D3]
+        (No symbol) [0x00007FF6322791CE]
+        (No symbol) [0x00007FF632278209]
+        (No symbol) [0x00007FF632278F6C]
+        GetHandleVerifier [0x00007FF632791BDD+181309]
+        sqlite3_dbdata_init [0x00007FF632A355B2+2262482]
+        sqlite3_dbdata_init [0x00007FF632A34F54+2260852]
+        sqlite3_dbdata_init [0x00007FF632A30C2B+2243659]
+        sqlite3_dbdata_init [0x00007FF632A35E57+2264695]
+        simdutf::get_active_implementation [0x00007FF6325B24CB+1856283]
+        simdutf::get_active_implementation [0x00007FF6325A47B4+1799684]
+        simdutf::get_active_implementation [0x00007FF6325A494B+1800091]
+        simdutf::get_active_implementation [0x00007FF63258484C+1668764]
+        BaseThreadInitThunk [0x00007FFB33977374+20]
+        RtlUserThreadStart [0x00007FFB33F5CC91+33]
 
-2025-05-12 10:14:29,727 - WARNING - Ошибка обработки подписчика: table subscribers has no column named date
-2025-05-12 10:14:29,776 - WARNING - Ошибка обработки подписчика: table subscribers has no column named date
-2025-05-12 10:14:29,826 - WARNING - Ошибка обработки подписчика: table subscribers has no column named date
-2025-05-12 10:14:29,956 - WARNING - Ошибка обработки подписчика: Message: no such element: Unable to locate element: {"method":"css selector","selector":"a.g-user-username"}
+2025-05-12 10:40:42,397 - WARNING - Ошибка обработки подписчика: Message: no such element: Unable to locate element: {"method":"css selector","selector":"a.g-user-username"}
   (Session info: chrome=134.0.6998.36); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Stacktrace:
-	GetHandleVerifier [0x00007FF632772975+53717]
-	simdutf::get_active_implementation [0x00007FF632597CF7+1747783]
-	(No symbol) [0x00007FF632235DA9]
-	(No symbol) [0x00007FF632285207]
-	(No symbol) [0x00007FF63228579C]
-	(No symbol) [0x00007FF63227A07C]
-	(No symbol) [0x00007FF6322AD33F]
-	(No symbol) [0x00007FF632279FCC]
-	(No symbol) [0x00007FF632279EC7]
-	(No symbol) [0x00007FF6322AD510]
-	(No symbol) [0x00007FF632279FCC]
-	(No symbol) [0x00007FF6322CFDE7]
-	(No symbol) [0x00007FF6322AD0D3]
-	(No symbol) [0x00007FF6322791CE]
-	(No symbol) [0x00007FF632278209]
-	(No symbol) [0x00007FF632278F6C]
-	GetHandleVerifier [0x00007FF632791BDD+181309]
-	sqlite3_dbdata_init [0x00007FF632A355B2+2262482]
-	sqlite3_dbdata_init [0x00007FF632A34F54+2260852]
-	sqlite3_dbdata_init [0x00007FF632A30C2B+2243659]
-	sqlite3_dbdata_init [0x00007FF632A35E57+2264695]
-	simdutf::get_active_implementation [0x00007FF6325B24CB+1856283]
-	simdutf::get_active_implementation [0x00007FF6325A47B4+1799684]
-	simdutf::get_active_implementation [0x00007FF6325A494B+1800091]
-	simdutf::get_active_implementation [0x00007FF63258484C+1668764]
-	BaseThreadInitThunk [0x00007FFB33977374+20]
-	RtlUserThreadStart [0x00007FFB33F5CC91+33]
+        GetHandleVerifier [0x00007FF632772975+53717]
+        simdutf::get_active_implementation [0x00007FF632597CF7+1747783]
+        (No symbol) [0x00007FF632235DA9]
+        (No symbol) [0x00007FF632285207]
+        (No symbol) [0x00007FF63228579C]
+        (No symbol) [0x00007FF63227A07C]
+        (No symbol) [0x00007FF6322AD33F]
+        (No symbol) [0x00007FF632279FCC]
+        (No symbol) [0x00007FF632279EC7]
+        (No symbol) [0x00007FF6322AD510]
+        (No symbol) [0x00007FF632279FCC]
+        (No symbol) [0x00007FF6322CFDE7]
+        (No symbol) [0x00007FF6322AD0D3]
+        (No symbol) [0x00007FF6322791CE]
+        (No symbol) [0x00007FF632278209]
+        (No symbol) [0x00007FF632278F6C]
+        GetHandleVerifier [0x00007FF632791BDD+181309]
+        sqlite3_dbdata_init [0x00007FF632A355B2+2262482]
+        sqlite3_dbdata_init [0x00007FF632A34F54+2260852]
+        sqlite3_dbdata_init [0x00007FF632A30C2B+2243659]
+        sqlite3_dbdata_init [0x00007FF632A35E57+2264695]
+        simdutf::get_active_implementation [0x00007FF6325B24CB+1856283]
+        simdutf::get_active_implementation [0x00007FF6325A47B4+1799684]
+        simdutf::get_active_implementation [0x00007FF6325A494B+1800091]
+        simdutf::get_active_implementation [0x00007FF63258484C+1668764]
+        BaseThreadInitThunk [0x00007FFB33977374+20]
+        RtlUserThreadStart [0x00007FFB33F5CC91+33]
 
-2025-05-12 10:14:30,021 - WARNING - Ошибка обработки подписчика: table subscribers has no column named date
-2025-05-12 10:14:30,069 - WARNING - Ошибка обработки подписчика: table subscribers has no column named date
-2025-05-12 10:14:30,118 - WARNING - Ошибка обработки подписчика: table subscribers has no column named date
-2025-05-12 10:14:30,118 - INFO - Добавлено подписчиков: 0
-2025-05-12 10:14:30,118 - INFO - Сбор транзакций (purchase)...
-2025-05-12 10:14:30,604 - INFO - Прокрутка страницы...
-2025-05-12 10:15:40,263 - INFO - Прокрутка завершена.
-2025-05-12 10:15:40,427 - WARNING - Ошибка обработки транзакции: could not convert string to float: '5!'
-2025-05-12 10:15:40,484 - WARNING - Ошибка обработки транзакции: could not convert string to float: '6!'
-2025-05-12 10:15:40,540 - WARNING - Ошибка обработки транзакции: could not convert string to float: '11!'
-2025-05-12 10:15:40,593 - WARNING - Ошибка обработки транзакции: could not convert string to float: '6!'
-2025-05-12 10:15:40,618 - WARNING - Ошибка обработки транзакции: Message: no such element: Unable to locate element: {"method":"css selector","selector":"a.g-user-username"}
+2025-05-12 10:40:42,677 - INFO - Добавлено подписчиков: 7
+2025-05-12 10:40:42,678 - INFO - Сбор транзакций (purchase)...
+2025-05-12 10:40:45,574 - INFO - Прокрутка страницы...
+2025-05-12 10:41:52,610 - INFO - Прокрутка завершена.
+2025-05-12 10:41:52,765 - WARNING - Ошибка обработки транзакции: could not convert string to float: '5!'
+2025-05-12 10:41:52,822 - WARNING - Ошибка обработки транзакции: could not convert string to float: '6!'
+2025-05-12 10:41:52,908 - WARNING - Ошибка обработки транзакции: could not convert string to float: '11!'
+2025-05-12 10:41:52,980 - WARNING - Ошибка обработки транзакции: could not convert string to float: '6!'
+2025-05-12 10:41:53,008 - WARNING - Ошибка обработки транзакции: Message: no such element: Unable to locate element: {"method":"css selector","selector":"a.g-user-username"}
   (Session info: chrome=134.0.6998.36); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Stacktrace:
-	GetHandleVerifier [0x00007FF632772975+53717]
-	simdutf::get_active_implementation [0x00007FF632597CF7+1747783]
-	(No symbol) [0x00007FF632235DA9]
-	(No symbol) [0x00007FF632285207]
-	(No symbol) [0x00007FF63228579C]
-	(No symbol) [0x00007FF63227A07C]
-	(No symbol) [0x00007FF6322AD33F]
-	(No symbol) [0x00007FF632279FCC]
-	(No symbol) [0x00007FF632279EC7]
-	(No symbol) [0x00007FF6322AD510]
-	(No symbol) [0x00007FF632279FCC]
-	(No symbol) [0x00007FF6322CFDE7]
-	(No symbol) [0x00007FF6322AD0D3]
-	(No symbol) [0x00007FF6322791CE]
-	(No symbol) [0x00007FF632278209]
-	(No symbol) [0x00007FF632278F6C]
-	GetHandleVerifier [0x00007FF632791BDD+181309]
-	sqlite3_dbdata_init [0x00007FF632A355B2+2262482]
-	sqlite3_dbdata_init [0x00007FF632A34F54+2260852]
-	sqlite3_dbdata_init [0x00007FF632A30C2B+2243659]
-	sqlite3_dbdata_init [0x00007FF632A35E57+2264695]
-	simdutf::get_active_implementation [0x00007FF6325B24CB+1856283]
-	simdutf::get_active_implementation [0x00007FF6325A47B4+1799684]
-	simdutf::get_active_implementation [0x00007FF6325A494B+1800091]
-	simdutf::get_active_implementation [0x00007FF63258484C+1668764]
-	BaseThreadInitThunk [0x00007FFB33977374+20]
-	RtlUserThreadStart [0x00007FFB33F5CC91+33]
+        GetHandleVerifier [0x00007FF632772975+53717]
+        simdutf::get_active_implementation [0x00007FF632597CF7+1747783]
+        (No symbol) [0x00007FF632235DA9]
+        (No symbol) [0x00007FF632285207]
+        (No symbol) [0x00007FF63228579C]
+        (No symbol) [0x00007FF63227A07C]
+        (No symbol) [0x00007FF6322AD33F]
+        (No symbol) [0x00007FF632279FCC]
+        (No symbol) [0x00007FF632279EC7]
+        (No symbol) [0x00007FF6322AD510]
+        (No symbol) [0x00007FF632279FCC]
+        (No symbol) [0x00007FF6322CFDE7]
+        (No symbol) [0x00007FF6322AD0D3]
+        (No symbol) [0x00007FF6322791CE]
+        (No symbol) [0x00007FF632278209]
+        (No symbol) [0x00007FF632278F6C]
+        GetHandleVerifier [0x00007FF632791BDD+181309]
+        sqlite3_dbdata_init [0x00007FF632A355B2+2262482]
+        sqlite3_dbdata_init [0x00007FF632A34F54+2260852]
+        sqlite3_dbdata_init [0x00007FF632A30C2B+2243659]
+        sqlite3_dbdata_init [0x00007FF632A35E57+2264695]
+        simdutf::get_active_implementation [0x00007FF6325B24CB+1856283]
+        simdutf::get_active_implementation [0x00007FF6325A47B4+1799684]
+        simdutf::get_active_implementation [0x00007FF6325A494B+1800091]
+        simdutf::get_active_implementation [0x00007FF63258484C+1668764]
+        BaseThreadInitThunk [0x00007FFB33977374+20]
+        RtlUserThreadStart [0x00007FFB33F5CC91+33]
 
-2025-05-12 10:15:40,713 - WARNING - Ошибка обработки транзакции: could not convert string to float: '20!'
-2025-05-12 10:15:40,771 - WARNING - Ошибка обработки транзакции: could not convert string to float: '15!'
-2025-05-12 10:15:40,820 - WARNING - Ошибка обработки транзакции: could not convert string to float: '10!'
-2025-05-12 10:15:40,841 - WARNING - Ошибка обработки транзакции: Message: no such element: Unable to locate element: {"method":"css selector","selector":"a.g-user-username"}
+2025-05-12 10:41:53,069 - WARNING - Ошибка обработки транзакции: could not convert string to float: '20!'
+2025-05-12 10:41:53,122 - WARNING - Ошибка обработки транзакции: could not convert string to float: '15!'
+2025-05-12 10:41:53,207 - WARNING - Ошибка обработки транзакции: could not convert string to float: '10!'
+2025-05-12 10:41:53,231 - WARNING - Ошибка обработки транзакции: Message: no such element: Unable to locate element: {"method":"css selector","selector":"a.g-user-username"}
   (Session info: chrome=134.0.6998.36); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Stacktrace:
-	GetHandleVerifier [0x00007FF632772975+53717]
-	simdutf::get_active_implementation [0x00007FF632597CF7+1747783]
-	(No symbol) [0x00007FF632235DA9]
-	(No symbol) [0x00007FF632285207]
-	(No symbol) [0x00007FF63228579C]
-	(No symbol) [0x00007FF63227A07C]
-	(No symbol) [0x00007FF6322AD33F]
-	(No symbol) [0x00007FF632279FCC]
-	(No symbol) [0x00007FF632279EC7]
-	(No symbol) [0x00007FF6322AD510]
-	(No symbol) [0x00007FF632279FCC]
-	(No symbol) [0x00007FF6322CFDE7]
-	(No symbol) [0x00007FF6322AD0D3]
-	(No symbol) [0x00007FF6322791CE]
-	(No symbol) [0x00007FF632278209]
-	(No symbol) [0x00007FF632278F6C]
-	GetHandleVerifier [0x00007FF632791BDD+181309]
-	sqlite3_dbdata_init [0x00007FF632A355B2+2262482]
-	sqlite3_dbdata_init [0x00007FF632A34F54+2260852]
-	sqlite3_dbdata_init [0x00007FF632A30C2B+2243659]
-	sqlite3_dbdata_init [0x00007FF632A35E57+2264695]
-	simdutf::get_active_implementation [0x00007FF6325B24CB+1856283]
-	simdutf::get_active_implementation [0x00007FF6325A47B4+1799684]
-	simdutf::get_active_implementation [0x00007FF6325A494B+1800091]
-	simdutf::get_active_implementation [0x00007FF63258484C+1668764]
-	BaseThreadInitThunk [0x00007FFB33977374+20]
-	RtlUserThreadStart [0x00007FFB33F5CC91+33]
+        GetHandleVerifier [0x00007FF632772975+53717]
+        simdutf::get_active_implementation [0x00007FF632597CF7+1747783]
+        (No symbol) [0x00007FF632235DA9]
+        (No symbol) [0x00007FF632285207]
+        (No symbol) [0x00007FF63228579C]
+        (No symbol) [0x00007FF63227A07C]
+        (No symbol) [0x00007FF6322AD33F]
+        (No symbol) [0x00007FF632279FCC]
+        (No symbol) [0x00007FF632279EC7]
+        (No symbol) [0x00007FF6322AD510]
+        (No symbol) [0x00007FF632279FCC]
+        (No symbol) [0x00007FF6322CFDE7]
+        (No symbol) [0x00007FF6322AD0D3]
+        (No symbol) [0x00007FF6322791CE]
+        (No symbol) [0x00007FF632278209]
+        (No symbol) [0x00007FF632278F6C]
+        GetHandleVerifier [0x00007FF632791BDD+181309]
+        sqlite3_dbdata_init [0x00007FF632A355B2+2262482]
+        sqlite3_dbdata_init [0x00007FF632A34F54+2260852]
+        sqlite3_dbdata_init [0x00007FF632A30C2B+2243659]
+        sqlite3_dbdata_init [0x00007FF632A35E57+2264695]
+        simdutf::get_active_implementation [0x00007FF6325B24CB+1856283]
+        simdutf::get_active_implementation [0x00007FF6325A47B4+1799684]
+        simdutf::get_active_implementation [0x00007FF6325A494B+1800091]
+        simdutf::get_active_implementation [0x00007FF63258484C+1668764]
+        BaseThreadInitThunk [0x00007FFB33977374+20]
+        RtlUserThreadStart [0x00007FFB33F5CC91+33]
 
-2025-05-12 10:15:40,861 - WARNING - Ошибка обработки транзакции: Message: no such element: Unable to locate element: {"method":"css selector","selector":"a.g-user-username"}
+2025-05-12 10:41:53,257 - WARNING - Ошибка обработки транзакции: Message: no such element: Unable to locate element: {"method":"css selector","selector":"a.g-user-username"}
   (Session info: chrome=134.0.6998.36); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Stacktrace:
-	GetHandleVerifier [0x00007FF632772975+53717]
-	simdutf::get_active_implementation [0x00007FF632597CF7+1747783]
-	(No symbol) [0x00007FF632235DA9]
-	(No symbol) [0x00007FF632285207]
-	(No symbol) [0x00007FF63228579C]
-	(No symbol) [0x00007FF63227A07C]
-	(No symbol) [0x00007FF6322AD33F]
-	(No symbol) [0x00007FF632279FCC]
-	(No symbol) [0x00007FF632279EC7]
-	(No symbol) [0x00007FF6322AD510]
-	(No symbol) [0x00007FF632279FCC]
-	(No symbol) [0x00007FF6322CFDE7]
-	(No symbol) [0x00007FF6322AD0D3]
-	(No symbol) [0x00007FF6322791CE]
-	(No symbol) [0x00007FF632278209]
-	(No symbol) [0x00007FF632278F6C]
-	GetHandleVerifier [0x00007FF632791BDD+181309]
-	sqlite3_dbdata_init [0x00007FF632A355B2+2262482]
-	sqlite3_dbdata_init [0x00007FF632A34F54+2260852]
-	sqlite3_dbdata_init [0x00007FF632A30C2B+2243659]
-	sqlite3_dbdata_init [0x00007FF632A35E57+2264695]
-	simdutf::get_active_implementation [0x00007FF6325B24CB+1856283]
-	simdutf::get_active_implementation [0x00007FF6325A47B4+1799684]
-	simdutf::get_active_implementation [0x00007FF6325A494B+1800091]
-	simdutf::get_active_implementation [0x00007FF63258484C+1668764]
-	BaseThreadInitThunk [0x00007FFB33977374+20]
-	RtlUserThreadStart [0x00007FFB33F5CC91+33]
+        GetHandleVerifier [0x00007FF632772975+53717]
+        simdutf::get_active_implementation [0x00007FF632597CF7+1747783]
+        (No symbol) [0x00007FF632235DA9]
+        (No symbol) [0x00007FF632285207]
+        (No symbol) [0x00007FF63228579C]
+        (No symbol) [0x00007FF63227A07C]
+        (No symbol) [0x00007FF6322AD33F]
+        (No symbol) [0x00007FF632279FCC]
+        (No symbol) [0x00007FF632279EC7]
+        (No symbol) [0x00007FF6322AD510]
+        (No symbol) [0x00007FF632279FCC]
+        (No symbol) [0x00007FF6322CFDE7]
+        (No symbol) [0x00007FF6322AD0D3]
+        (No symbol) [0x00007FF6322791CE]
+        (No symbol) [0x00007FF632278209]
+        (No symbol) [0x00007FF632278F6C]
+        GetHandleVerifier [0x00007FF632791BDD+181309]
+        sqlite3_dbdata_init [0x00007FF632A355B2+2262482]
+        sqlite3_dbdata_init [0x00007FF632A34F54+2260852]
+        sqlite3_dbdata_init [0x00007FF632A30C2B+2243659]
+        sqlite3_dbdata_init [0x00007FF632A35E57+2264695]
+        simdutf::get_active_implementation [0x00007FF6325B24CB+1856283]
+        simdutf::get_active_implementation [0x00007FF6325A47B4+1799684]
+        simdutf::get_active_implementation [0x00007FF6325A494B+1800091]
+        simdutf::get_active_implementation [0x00007FF63258484C+1668764]
+        BaseThreadInitThunk [0x00007FFB33977374+20]
+        RtlUserThreadStart [0x00007FFB33F5CC91+33]
 
-2025-05-12 10:15:40,861 - INFO - Добавлено транзакций: 0
-2025-05-12 10:15:40,861 - INFO - Сбор транзакций (tip)...
-2025-05-12 10:15:41,552 - INFO - Прокрутка страницы...
-2025-05-12 10:16:23,946 - INFO - Прокрутка завершена.
-2025-05-12 10:16:24,286 - WARNING - Ошибка обработки транзакции: Message: no such element: Unable to locate element: {"method":"css selector","selector":"a.g-user-username"}
+2025-05-12 10:41:53,259 - INFO - Добавлено транзакций: 0
+2025-05-12 10:41:53,259 - INFO - Сбор транзакций (tip)...
+2025-05-12 10:41:54,947 - INFO - Прокрутка страницы...
+2025-05-12 10:42:35,449 - INFO - Прокрутка завершена.
+2025-05-12 10:42:35,785 - WARNING - Ошибка обработки транзакции: Message: no such element: Unable to locate element: {"method":"css selector","selector":"a.g-user-username"}
   (Session info: chrome=134.0.6998.36); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Stacktrace:
-	GetHandleVerifier [0x00007FF632772975+53717]
-	simdutf::get_active_implementation [0x00007FF632597CF7+1747783]
-	(No symbol) [0x00007FF632235DA9]
-	(No symbol) [0x00007FF632285207]
-	(No symbol) [0x00007FF63228579C]
-	(No symbol) [0x00007FF63227A07C]
-	(No symbol) [0x00007FF6322AD33F]
-	(No symbol) [0x00007FF632279FCC]
-	(No symbol) [0x00007FF632279EC7]
-	(No symbol) [0x00007FF6322AD510]
-	(No symbol) [0x00007FF632279FCC]
-	(No symbol) [0x00007FF6322CFDE7]
-	(No symbol) [0x00007FF6322AD0D3]
-	(No symbol) [0x00007FF6322791CE]
-	(No symbol) [0x00007FF632278209]
-	(No symbol) [0x00007FF632278F6C]
-	GetHandleVerifier [0x00007FF632791BDD+181309]
-	sqlite3_dbdata_init [0x00007FF632A355B2+2262482]
-	sqlite3_dbdata_init [0x00007FF632A34F54+2260852]
-	sqlite3_dbdata_init [0x00007FF632A30C2B+2243659]
-	sqlite3_dbdata_init [0x00007FF632A35E57+2264695]
-	simdutf::get_active_implementation [0x00007FF6325B24CB+1856283]
-	simdutf::get_active_implementation [0x00007FF6325A47B4+1799684]
-	simdutf::get_active_implementation [0x00007FF6325A494B+1800091]
-	simdutf::get_active_implementation [0x00007FF63258484C+1668764]
-	BaseThreadInitThunk [0x00007FFB33977374+20]
-	RtlUserThreadStart [0x00007FFB33F5CC91+33]
+        GetHandleVerifier [0x00007FF632772975+53717]
+        simdutf::get_active_implementation [0x00007FF632597CF7+1747783]
+        (No symbol) [0x00007FF632235DA9]
+        (No symbol) [0x00007FF632285207]
+        (No symbol) [0x00007FF63228579C]
+        (No symbol) [0x00007FF63227A07C]
+        (No symbol) [0x00007FF6322AD33F]
+        (No symbol) [0x00007FF632279FCC]
+        (No symbol) [0x00007FF632279EC7]
+        (No symbol) [0x00007FF6322AD510]
+        (No symbol) [0x00007FF632279FCC]
+        (No symbol) [0x00007FF6322CFDE7]
+        (No symbol) [0x00007FF6322AD0D3]
+        (No symbol) [0x00007FF6322791CE]
+        (No symbol) [0x00007FF632278209]
+        (No symbol) [0x00007FF632278F6C]
+        GetHandleVerifier [0x00007FF632791BDD+181309]
+        sqlite3_dbdata_init [0x00007FF632A355B2+2262482]
+        sqlite3_dbdata_init [0x00007FF632A34F54+2260852]
+        sqlite3_dbdata_init [0x00007FF632A30C2B+2243659]
+        sqlite3_dbdata_init [0x00007FF632A35E57+2264695]
+        simdutf::get_active_implementation [0x00007FF6325B24CB+1856283]
+        simdutf::get_active_implementation [0x00007FF6325A47B4+1799684]
+        simdutf::get_active_implementation [0x00007FF6325A494B+1800091]
+        simdutf::get_active_implementation [0x00007FF63258484C+1668764]
+        BaseThreadInitThunk [0x00007FFB33977374+20]
+        RtlUserThreadStart [0x00007FFB33F5CC91+33]
 
-2025-05-12 10:16:24,309 - WARNING - Ошибка обработки транзакции: Message: no such element: Unable to locate element: {"method":"css selector","selector":"a.g-user-username"}
+2025-05-12 10:42:35,828 - WARNING - Ошибка обработки транзакции: Message: no such element: Unable to locate element: {"method":"css selector","selector":"a.g-user-username"}
   (Session info: chrome=134.0.6998.36); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Stacktrace:
-	GetHandleVerifier [0x00007FF632772975+53717]
-	simdutf::get_active_implementation [0x00007FF632597CF7+1747783]
-	(No symbol) [0x00007FF632235DA9]
-	(No symbol) [0x00007FF632285207]
-	(No symbol) [0x00007FF63228579C]
-	(No symbol) [0x00007FF63227A07C]
-	(No symbol) [0x00007FF6322AD33F]
-	(No symbol) [0x00007FF632279FCC]
-	(No symbol) [0x00007FF632279EC7]
-	(No symbol) [0x00007FF6322AD510]
-	(No symbol) [0x00007FF632279FCC]
-	(No symbol) [0x00007FF6322CFDE7]
-	(No symbol) [0x00007FF6322AD0D3]
-	(No symbol) [0x00007FF6322791CE]
-	(No symbol) [0x00007FF632278209]
-	(No symbol) [0x00007FF632278F6C]
-	GetHandleVerifier [0x00007FF632791BDD+181309]
-	sqlite3_dbdata_init [0x00007FF632A355B2+2262482]
-	sqlite3_dbdata_init [0x00007FF632A34F54+2260852]
-	sqlite3_dbdata_init [0x00007FF632A30C2B+2243659]
-	sqlite3_dbdata_init [0x00007FF632A35E57+2264695]
-	simdutf::get_active_implementation [0x00007FF6325B24CB+1856283]
-	simdutf::get_active_implementation [0x00007FF6325A47B4+1799684]
-	simdutf::get_active_implementation [0x00007FF6325A494B+1800091]
-	simdutf::get_active_implementation [0x00007FF63258484C+1668764]
-	BaseThreadInitThunk [0x00007FFB33977374+20]
-	RtlUserThreadStart [0x00007FFB33F5CC91+33]
+        GetHandleVerifier [0x00007FF632772975+53717]
+        simdutf::get_active_implementation [0x00007FF632597CF7+1747783]
+        (No symbol) [0x00007FF632235DA9]
+        (No symbol) [0x00007FF632285207]
+        (No symbol) [0x00007FF63228579C]
+        (No symbol) [0x00007FF63227A07C]
+        (No symbol) [0x00007FF6322AD33F]
+        (No symbol) [0x00007FF632279FCC]
+        (No symbol) [0x00007FF632279EC7]
+        (No symbol) [0x00007FF6322AD510]
+        (No symbol) [0x00007FF632279FCC]
+        (No symbol) [0x00007FF6322CFDE7]
+        (No symbol) [0x00007FF6322AD0D3]
+        (No symbol) [0x00007FF6322791CE]
+        (No symbol) [0x00007FF632278209]
+        (No symbol) [0x00007FF632278F6C]
+        GetHandleVerifier [0x00007FF632791BDD+181309]
+        sqlite3_dbdata_init [0x00007FF632A355B2+2262482]
+        sqlite3_dbdata_init [0x00007FF632A34F54+2260852]
+        sqlite3_dbdata_init [0x00007FF632A30C2B+2243659]
+        sqlite3_dbdata_init [0x00007FF632A35E57+2264695]
+        simdutf::get_active_implementation [0x00007FF6325B24CB+1856283]
+        simdutf::get_active_implementation [0x00007FF6325A47B4+1799684]
+        simdutf::get_active_implementation [0x00007FF6325A494B+1800091]
+        simdutf::get_active_implementation [0x00007FF63258484C+1668764]
+        BaseThreadInitThunk [0x00007FFB33977374+20]
+        RtlUserThreadStart [0x00007FFB33F5CC91+33]
 
-2025-05-12 10:16:24,331 - WARNING - Ошибка обработки транзакции: Message: no such element: Unable to locate element: {"method":"css selector","selector":"a.g-user-username"}
+2025-05-12 10:42:35,854 - WARNING - Ошибка обработки транзакции: Message: no such element: Unable to locate element: {"method":"css selector","selector":"a.g-user-username"}
   (Session info: chrome=134.0.6998.36); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Stacktrace:
-	GetHandleVerifier [0x00007FF632772975+53717]
-	simdutf::get_active_implementation [0x00007FF632597CF7+1747783]
-	(No symbol) [0x00007FF632235DA9]
-	(No symbol) [0x00007FF632285207]
-	(No symbol) [0x00007FF63228579C]
-	(No symbol) [0x00007FF63227A07C]
-	(No symbol) [0x00007FF6322AD33F]
-	(No symbol) [0x00007FF632279FCC]
-	(No symbol) [0x00007FF632279EC7]
-	(No symbol) [0x00007FF6322AD510]
-	(No symbol) [0x00007FF632279FCC]
-	(No symbol) [0x00007FF6322CFDE7]
-	(No symbol) [0x00007FF6322AD0D3]
-	(No symbol) [0x00007FF6322791CE]
-	(No symbol) [0x00007FF632278209]
-	(No symbol) [0x00007FF632278F6C]
-	GetHandleVerifier [0x00007FF632791BDD+181309]
-	sqlite3_dbdata_init [0x00007FF632A355B2+2262482]
-	sqlite3_dbdata_init [0x00007FF632A34F54+2260852]
-	sqlite3_dbdata_init [0x00007FF632A30C2B+2243659]
-	sqlite3_dbdata_init [0x00007FF632A35E57+2264695]
-	simdutf::get_active_implementation [0x00007FF6325B24CB+1856283]
-	simdutf::get_active_implementation [0x00007FF6325A47B4+1799684]
-	simdutf::get_active_implementation [0x00007FF6325A494B+1800091]
-	simdutf::get_active_implementation [0x00007FF63258484C+1668764]
-	BaseThreadInitThunk [0x00007FFB33977374+20]
-	RtlUserThreadStart [0x00007FFB33F5CC91+33]
+        GetHandleVerifier [0x00007FF632772975+53717]
+        simdutf::get_active_implementation [0x00007FF632597CF7+1747783]
+        (No symbol) [0x00007FF632235DA9]
+        (No symbol) [0x00007FF632285207]
+        (No symbol) [0x00007FF63228579C]
+        (No symbol) [0x00007FF63227A07C]
+        (No symbol) [0x00007FF6322AD33F]
+        (No symbol) [0x00007FF632279FCC]
+        (No symbol) [0x00007FF632279EC7]
+        (No symbol) [0x00007FF6322AD510]
+        (No symbol) [0x00007FF632279FCC]
+        (No symbol) [0x00007FF6322CFDE7]
+        (No symbol) [0x00007FF6322AD0D3]
+        (No symbol) [0x00007FF6322791CE]
+        (No symbol) [0x00007FF632278209]
+        (No symbol) [0x00007FF632278F6C]
+        GetHandleVerifier [0x00007FF632791BDD+181309]
+        sqlite3_dbdata_init [0x00007FF632A355B2+2262482]
+        sqlite3_dbdata_init [0x00007FF632A34F54+2260852]
+        sqlite3_dbdata_init [0x00007FF632A30C2B+2243659]
+        sqlite3_dbdata_init [0x00007FF632A35E57+2264695]
+        simdutf::get_active_implementation [0x00007FF6325B24CB+1856283]
+        simdutf::get_active_implementation [0x00007FF6325A47B4+1799684]
+        simdutf::get_active_implementation [0x00007FF6325A494B+1800091]
+        simdutf::get_active_implementation [0x00007FF63258484C+1668764]
+        BaseThreadInitThunk [0x00007FFB33977374+20]
+        RtlUserThreadStart [0x00007FFB33F5CC91+33]
 
-2025-05-12 10:16:24,734 - INFO - Добавлено транзакций: 7
-2025-05-12 10:16:25,769 - INFO - 127.0.0.1 - - [12/May/2025 10:16:25] "POST /run HTTP/1.1" 302 -
-2025-05-12 10:16:25,780 - INFO - 127.0.0.1 - - [12/May/2025 10:16:25] "GET / HTTP/1.1" 200 -
+2025-05-12 10:42:36,241 - INFO - Добавлено транзакций: 7
+2025-05-12 10:42:39,335 - INFO - 127.0.0.1 - - [12/May/2025 10:42:39] "POST /run HTTP/1.1" 302 -
+2025-05-12 10:42:39,345 - INFO - 127.0.0.1 - - [12/May/2025 10:42:39] "GET / HTTP/1.1" 200 -
